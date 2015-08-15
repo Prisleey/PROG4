@@ -14,7 +14,7 @@
         <title></title>
     </head>
     
-        <h1>Hello World!</h1>
+        <h1>LOJA!</h1>
         <%
         List<Produto> produtos;
         produtos = (List<Produto>) request.getAttribute("produtos");
@@ -24,8 +24,8 @@
             <div>
                 <p><%=p.getNameProd()%></p>
                 <a href="produto-detalhe?id=<%=p.getCod()%>.jpg"
-                   <img src="imagens/<%=p.getCod()%>.jpg" 
-                        alt="produto <%=p.getCod()%>" />
+                   <img src="/imagens/<%=p.getCod()%>.jpg" 
+                        alt="/produto <%=p.getCod()%>" />
                 </a>
                 <p> R$ <%=p.getValue()%></p>
             </div>
