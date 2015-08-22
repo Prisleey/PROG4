@@ -3,7 +3,7 @@
     Created on : 14/08/2015, 21:00:47
     Author     : prisley.costa
 --%>
-
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@page import="java.util.List"%>
 <%@page import="br.pucpr.prog4.lojaVirtual.models.Produto"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -15,24 +15,15 @@
     </head>
     
         <h1>LOJA!</h1>
-        <%
-        List<Produto> produtos;
-        produtos = (List<Produto>) request.getAttribute("produtos");
         
-        for(Produto p : produtos) {
-        %>
+        <c:forEach var="produto" items="${produtos}">
             <div>
-                <p><%=p.getNameProd()%></p>
-                <a href="produto-detalhe?id=<%=p.getCod()%>.jpg"
-                   <img src="/imagens/<%=p.getCod()%>.jpg" 
-                        alt="/produto <%=p.getCod()%>" />
+                <p>${produto.nameProd}</p>
+                <a href="produto-detalhe?id=${produto.cod}.jpg">
+                   <img src="../Imagens/${produto.cod}.jpg" 
+                        alt="/produto ${produto.cod}" />
                 </a>
-                <p> R$ <%=p.getValue()%></p>
+                <p> R$ ${produto.value}</p>
+                    
             </div>
-        <%
-        }
-        %>
-        
-        
-    
-
+        </c:forEach>
