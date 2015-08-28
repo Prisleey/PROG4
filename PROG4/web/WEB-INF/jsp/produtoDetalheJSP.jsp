@@ -13,10 +13,10 @@
     </head>
     <body>
         <h1>Detalhe Produto!</h1>
-        <c:forEach var="produto" items="${produtos}">
-            <div>
-                
-            </div>
-        </c:forEach>
+        <div>
+            <a href="produtoDetalheJSP?id=${produto.cod}">
+                <img src="../Imagens/${produto.cod}.jpg"/>
+            </a>
+        </div>
     </body>
 </html>
