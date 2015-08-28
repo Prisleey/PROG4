@@ -8,6 +8,10 @@
         <servlet-name>DetalheProdutoServlet</servlet-name>
         <servlet-class>br.pucpr.prog4.lojaVirtual.controllers.DetalheProdutoServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>CadastroCliente</servlet-name>
+        <servlet-class>br.pucpr.prog4.lojaVirtual.controllers.CadastroClienteServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>ProdutoListaServlet</servlet-name>
         <url-pattern>/produto/lista</url-pattern>
@@ -15,6 +19,10 @@
     <servlet-mapping>
         <servlet-name>DetalheProdutoServlet</servlet-name>
         <url-pattern>/produto/detalhe/</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CadastroCliente</servlet-name>
+        <url-pattern>/CadastroCliente</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
