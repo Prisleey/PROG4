@@ -18,6 +18,7 @@
             <label for="labelPF">Pessoa Fisica</label><input type="radio" name="person" value="Pessoa Fisica"><br>
             <label for="labelPJ">Pessoa Juridica</label><input type="radio" name="person" value="Pessoa Juridica"><br><br>
             <label for="labelName">Nome: </label><input type="text" name="name" id="labelName"><label for="labelName"</label><br>
+            <label for="labelData">Data Nascimento:</label><input type="text" id="labelData" name="dataNasc"/><br>
             <label for="labelCPF">CPF: <input type="text" name="cpf" id="labelCPF"<br><br>
             Sexo: <select name="sexo">
                 <option value="select">Selecione</option>

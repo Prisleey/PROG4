@@ -6,8 +6,14 @@
 package br.pucpr.prog4.lojaVirtual.controllers;
 
 import br.pucpr.prog4.lojaVirtual.models.Cliente;
+import com.sun.xml.internal.ws.spi.db.BindingContextFactory;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -34,5 +40,12 @@ public class CadastroClienteServlet extends HttpServlet {
         cli.setSexo(request.getParameter("sexo"));
         cli.setCpf(request.getParameter("cpf"));
         cli.setTipoPessoa(request.getParameter("person"));
+        SimpleDateFormat sdf;
+        sdf = new SimpleDateFormat("dd/MM/yyyy");
+        try {
+            Date dataNascimento = sdf.parse(request.getParameter("dataNasc"));
+        } catch (ParseException e) {
+            Logger.getLogger(CadastroClienteServlet.class.getName()).log(Level.SEVERE,null,e);
+        }
     }
 }
