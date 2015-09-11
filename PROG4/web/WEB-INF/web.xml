@@ -16,6 +16,10 @@
         <servlet-name>DetalheProdutoServlet</servlet-name>
         <url-pattern>/produto/detalhe/</url-pattern>
     </servlet-mapping>
+    <servlet>
+        <servlet-name>CadastroCliente</servlet-name>
+        <servlet-class>br.pucpr.prog4.lojaVirtual.controllers.CadastroClienteServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>CadastroCliente</servlet-name>
         <url-pattern>/CadastroCliente</url-pattern>
