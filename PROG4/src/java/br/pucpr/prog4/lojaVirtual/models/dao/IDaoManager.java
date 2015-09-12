@@ -6,4 +6,5 @@ public interface IDaoManager
     void encerrar();
     void confirmarTransação();
     void abortarTransação();
+    IPessoaDAO getPessoaDAO();
 }

@@ -63,5 +63,8 @@ public class JdbcDaoManager implements IDaoManager
         }
     }
 
-    
+    @Override
+    public IPessoaDAO getPessoaDAO() {
+        return pessoaDAO;
+    }    
 }
