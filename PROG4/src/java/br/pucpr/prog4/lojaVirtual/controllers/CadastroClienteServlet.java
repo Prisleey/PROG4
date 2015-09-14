@@ -8,9 +8,7 @@ package br.pucpr.prog4.lojaVirtual.controllers;
 import br.pucpr.prog4.lojaVirtual.models.Cliente;
 import br.pucpr.prog4.lojaVirtual.models.ClienteManagerImpl;
 import br.pucpr.prog4.lojaVirtual.models.IClienteManager;
-import com.sun.xml.internal.ws.spi.db.BindingContextFactory;
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -41,15 +39,14 @@ public class CadastroClienteServlet extends HttpServlet {
         cli.setNome(request.getParameter("name"));
         cli.setSexo(request.getParameter("sexo"));
         cli.setCpf(request.getParameter("cpf"));
-        cli.setTipoPessoa(request.getParameter("person"));
+        cli.setTipoPessoa(request.getParameter("tipoPessoa"));
         SimpleDateFormat sdf;
         sdf = new SimpleDateFormat("dd/MM/yyyy");
-        /*try {
+        try {
             Date dataNascimento = sdf.parse(request.getParameter("dataNasc"));
         } catch (ParseException e) {
             Logger.getLogger(CadastroClienteServlet.class.getName()).log(Level.SEVERE,null,e);
-        }*/
-        
+        }
         IClienteManager iManager;
         iManager = new ClienteManagerImpl();
         iManager.cadastrar(cli);

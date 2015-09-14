@@ -18,7 +18,7 @@ public class DetalheProdutoServlet extends HttpServlet {
         int id = Integer.parseInt(request.getParameter("id"));
         Produto produto = produtoM.obterPorId(id);
         
-        request.setAttribute("produtos", produto);
+        request.setAttribute("produto", produto);
         RequestDispatcher rd;
         rd = request.getRequestDispatcher("/WEB-INF/jsp/produtoDetalheJSP.jsp");
         rd.forward(request, response);

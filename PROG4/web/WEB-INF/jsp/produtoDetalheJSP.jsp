@@ -9,14 +9,15 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>Detalhe Produto</title>
     </head>
     <body>
         <h1>Detalhe Produto!</h1>
         <div>
-            <a href="produtoDetalheJSP?id=${produto.cod}">
+            <a href="produto?id=${produto.cod}">
                 <img src="../Imagens/${produto.cod}.jpg"/>
             </a>
+            <p> R$ ${produto.value}</p>
         </div>
     </body>
 </html>

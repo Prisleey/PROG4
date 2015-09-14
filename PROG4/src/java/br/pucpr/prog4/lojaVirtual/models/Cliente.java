@@ -1,8 +1,11 @@
 
 package br.pucpr.prog4.lojaVirtual.models;
 
+import java.util.Date;
+
 public class Cliente {
     private String tipoPessoa;
+    private Date dataNasc;
     private String nome;
     private String cpf;
     private String sexo;
@@ -43,4 +46,12 @@ public class Cliente {
     public void setTipoPessoa(String tipoPessoa) {
         this.tipoPessoa = tipoPessoa;
     }    
+
+    public Date getDataNasc() {
+        return dataNasc;
+    }
+
+    public void setDataNasc(Date dataNasc) {
+        this.dataNasc = dataNasc;
+    }
 }

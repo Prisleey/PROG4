@@ -8,4 +8,5 @@ package br.pucpr.prog4.lojaVirtual.models;
 public class ProdutoDetalhe {
     
     private Produto produto;
+
 }
