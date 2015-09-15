@@ -5,7 +5,6 @@
  */
 package br.pucpr.prog4.lojaVirtual.models;
 
-import br.pucpr.prog4.lojaVirtual.models.dao.DaoException;
 import br.pucpr.prog4.lojaVirtual.models.dao.IDaoManager;
 import br.pucpr.prog4.lojaVirtual.models.dao.IPessoaDAO;
 import br.pucpr.prog4.lojaVirtual.models.dao.JdbcDaoManager;

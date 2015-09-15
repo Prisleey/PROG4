@@ -44,7 +44,5 @@ public class JdbcPessoaDAO implements IPessoaDAO{
         } catch (Exception ex) {
             throw new DaoException("Ocorreu um erro ao inserir um cliente " + ex.getMessage());
         }
-
     }
-    
 }
