@@ -15,7 +15,7 @@
     </head>
     
         <h1>LOJA!</h1>
-        
+
         <c:forEach var="produto" items="${produtos}">
             <div>
                 <p>${produto.nameProd}</p>

@@ -44,6 +44,7 @@ public class CadastroClienteServlet extends HttpServlet {
         sdf = new SimpleDateFormat("dd/MM/yyyy");
         try {
             Date dataNascimento = sdf.parse(request.getParameter("dataNasc"));
+            cli.setDataNasc(dataNascimento);
         } catch (ParseException e) {
             Logger.getLogger(CadastroClienteServlet.class.getName()).log(Level.SEVERE,null,e);
         }

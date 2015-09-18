@@ -9,37 +9,32 @@ public class JdbcDaoManager implements IDaoManager
     private Connection conexao;
     private JdbcPessoaDAO pessoaDAO;
     
-    public JdbcDaoManager()
-    {
+    public JdbcDaoManager() {
         this.pessoaDAO = new JdbcPessoaDAO();
     }
     
     @Override
-    public void iniciar() throws DaoException
-    {
-        try
-        {
+    public void iniciar() throws DaoException {
+        try {
             Class.forName("com.mysql.jdbc.Driver");
             String url;
-            url = "jdbc:mysql://localhost:3306/lojaprisley";
+            url = "jdbc:mysql://localhost:3306/loja";
             conexao = DriverManager.getConnection(url, "root", "root");
             
             conexao.setAutoCommit(false);
             pessoaDAO.setConexão(conexao);
-        }
-        catch( Exception ex )
-        {
+        } catch( Exception ex ) {
             throw new DaoException("Ocorreu um erro ao conectar ao banco de dados:" + 
                     ex.getMessage());
         }
     }
 
     @Override
-    public void encerrar() 
-    {
+    public void encerrar() {
         try {
-            if(!conexao.isClosed())
+            if(!conexao.isClosed()) {
                 conexao.close();
+            }
         } catch (SQLException ex) {
             
         }

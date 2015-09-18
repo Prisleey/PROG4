@@ -4,17 +4,16 @@ package br.pucpr.prog4.lojaVirtual.models;
 import java.util.Date;
 
 public class Cliente {
+    private int id;
     private String tipoPessoa;
     private Date dataNasc;
     private String nome;
     private String cpf;
     private String sexo;
-    private int id;
     
     public Cliente() {
         
     }
-    
 
     public String getNome() {
         return nome;

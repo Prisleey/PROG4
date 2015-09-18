@@ -24,21 +24,24 @@ public class JdbcPessoaDAO implements IPessoaDAO{
     @Override
     public Cliente inserir(Cliente cliente) {
         String sql;
-        sql = "INSERT INTO pessoa("
+        sql = "INSERT INTO cliente("
                 + "nome,"
-                + "cpf,"
+                + "dataNascimento,"
+                + "tipo,"
                 + "sexo,"
-                + "tipoPessoa"
-                + " VALUES (?, ?, ?, ?)";
+                + "cpf) "
+                + " VALUES (?, ?, ?, ?, ?);";
 
         PreparedStatement ps;
         try {
             ps = conexao.prepareStatement(sql);
             ps.setString(1, cliente.getNome());
-            ps.setString(2, cliente.getCpf());
-            ps.setString(3, cliente.getSexo());
-            ps.setString(4, cliente.getTipoPessoa());
-            ps.executeQuery();
+            java.sql.Date dataSQL = new java.sql.Date(cliente.getDataNasc().getTime());
+            ps.setDate(2, dataSQL);
+            ps.setString(3, cliente.getTipoPessoa());
+            ps.setString(4, cliente.getSexo());
+            ps.setString(5, cliente.getCpf());
+            ps.executeUpdate();
             return cliente;
             
         } catch (Exception ex) {
