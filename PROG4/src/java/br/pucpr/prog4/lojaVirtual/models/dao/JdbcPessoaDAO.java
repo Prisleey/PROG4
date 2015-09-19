@@ -20,7 +20,7 @@ public class JdbcPessoaDAO implements IPessoaDAO{
     public void setConexão(Connection conexao) {
         this.conexao = conexao;
     }
-    
+
     @Override
     public Cliente inserir(Cliente cliente) {
         String sql;
